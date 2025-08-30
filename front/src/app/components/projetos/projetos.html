@@ -1,49 +1,22 @@
 <nav>
-  <button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-    Página Inicial
-  </button>
-
-  <button routerLink="/projetos" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-    Projetos
-  </button>
-
-  <button routerLink="/experiencias" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-    Experiências
-  </button>
-
-  <button routerLink="/contato" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-    Contato
-  </button>
+  <button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Página Inicial</button>
+  <button routerLink="/projetos" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Projetos</button>
+  <button routerLink="/experiencias" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Experiências</button>
+  <button routerLink="/contato" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Contato</button>
 </nav>
 
-<div class="container">
-  <div class="projeto">
-    <img id="foto" src="https://previews.dropbox.com/p/thumb/ACuFBO0dKPFswaTZaNsYAjLr3fo3QSEPcIJVAvL2uz6yBKAGujKU4iuZ78MjhB5LcO-eU6sryS51cFF7lSsxNHXdyf5KfO__JeDKsIhfFZe_Zl21CgAHNXg_SbngoYggiBlTcIIZZgwcNAbgQ0Grii8QFJGbnDc7ynRAe6894Cd9vUwo8iSpbPNRidDJJ2_uv5MMokQvnVhC4joTOD1vsY6msMSx8bLck2C4hvaEnuSOtBM06TaE0AqZyCGiZ5Mp1veR0N_hufDMeT4Ii9CF3F8ODL0rrDpdyUO8OJiTcJ2QYuPqqBsBKIlH5MV6IXJAwLw/p.png" alt="fotoPerfil" width="450px" height="250px">
-    <span id="descricaoProjeto"><b>Banco de Currículos (em andamento)</b><br><br>
-      Desenvolvi, na plataforma Bubble.io, um sistema de gestão de currículos voltado para diretores e gestores da empresa.
-O aplicativo permite o cadastro e armazenamento centralizado de currículos, com funcionalidades de busca e filtragem avançadas, facilitando o processo de seleção de candidatos. O sistema também possibilita a organização dos currículos por área de atuação e nível de experiência, oferecendo uma visão clara e estruturada para apoiar a tomada de decisão durante os processos de recrutamento e seleção.
-Esse projeto foi pensado para otimizar o fluxo de recrutamento interno, reduzir o tempo gasto em triagens manuais e fornecer aos diretores uma ferramenta prática e eficiente para encontrar os melhores talentos.</span>
+<section class="projetos-section">
+  <h1 class="title">Projetos</h1>
+
+  <div class="cards">
+    <div class="card" *ngFor="let projeto of projetos">
+      <img [src]="projeto.imagem" alt="{{ projeto.titulo }}" class="card-img" />
+      <div class="card-content">
+        <h3 class="card-title">{{ projeto.titulo }}</h3>
+        <p class="card-description">{{ projeto.descricao }}</p>
+      </div>
+    </div>
   </div>
-  <div class="projeto">
-    <img id="foto" src="https://previews.dropbox.com/p/thumb/ACsgSe3Nuxm2vW0jarpUjcJ47EQwZkTIRqpH2qC-_9TjP9nuL0COX9t3Gxtx0pXondgwhmMflcH7myZVtlmA1TTMxnsjhd2pADtrVLuLjb6jaCfzt68pmrBdw9zCUDoqiPe9Rf0XD8tN1dLMv0HZNMvvvgON_2_c6P14IbsQaYCMlvLHdc-k6Axn6dfS9f99UmG5J6uOFM0SMi_B0VgGUwuLAN6DJmlWYSeWk-A6pYnsrh7ilOmfkiQRevT4sDH89Oo78wqFnkw4uZcd-PykaksiVmY-zMoDBfP93l7REoiryV3bkHYGLiYHY4WLxv6s2KISIYaZ7CjzooaXgYQCYYM-/p.png" alt="fotoPerfil" width="450px" height="250px">
-    <span id="descricaoProjeto"><b>Reserva de Salas</b><br><br>
-      Desenvolvi um aplicativo no Power Apps para gerenciamento de reservas de salas.
-O sistema <b>se conecta ao Microsoft Teams e ao Outlook Calendar</b>, permitindo que os usuários façam reservas de forma simples e integrada ao calendário corporativo. <br> <br>A solução facilita a visualização das salas disponíveis, evita conflitos de agendamento e envia notificações automáticas aos envolvidos.
-Esse projeto foi pensado para otimizar a gestão de recursos físicos da empresa, trazendo praticidade e agilidade no dia a dia dos times.</span>
-  </div>
-  <div class="projeto">
-    <img id="foto" src="https://previews.dropbox.com/p/thumb/ACtySRTtuy7E0F2HaFZYWOla_bs-bws3z5OygfsXI3C7OaEhptcYlLexzNsYGfHuZotXZGklcB9k8HznClDmsbHwZ-51LzabAflYfPiN8qqYNO_wjp7uFPOLnGF70X2kf0FuK6D8I3kLQofEhgYhh39yDFRYZVeLo2AjpnvRSqUSzp1mnjlrm2nPXA49TVu-aQ-6kzAS8g_0n2EM2H6dOUvKJNjnNOvDs0-aLrgJ_xc4F9iXdUHlBEEXd-qruu0liqet2ziheCIx_2bikDtzHsCCO2q-LwvXKf83UxQ0zuGkKCb455wenM5v5kTLl3RN-uG-DHrTRSfQ4Bx71dtBUdPk/p.png" alt="fotoPerfil" width="450px" height="250px">
-    <span id="descricaoProjeto"><b>Help Desk</b><br><br>Criei um aplicativo de Help Desk no Power Apps, voltado para o registro e acompanhamento de chamados técnicos.
-A ferramenta permite a abertura de tickets com definição de prioridade, categorização por departamento e acompanhamento do status (novo, em andamento, pausado, concluído). <br><br>O sistema também gera dashboards interativos, possibilitando análises por status e por área responsável, auxiliando na tomada de decisão e no monitoramento da produtividade da equipe de suporte.
-Essa solução trouxe maior organização para o fluxo de atendimento, além de transparência no acompanhamento dos chamados pelos colaboradores.</span>
-  </div>
-  <div class="projeto">
-    <img id="foto" src="https://previews.dropbox.com/p/thumb/ACuoVcrR_pOEWM-BUQ1K4n4N2rF46uBlEJrOI2v3NHNhjHmfCWi6uouj8IDji4JRbqFk0dehkHTd7wuIWU3AuZsEwwEgD1T0eogPR1rLPwwp4rYtQQR8VWKlINJDPCQ7bB2NuEp6elt3El7outmsHBACkhqZHT71p90zPBK5dAppjT9_T1Q_ur_1xsxS6MQ1Ld0U1rwJjUa_DFgqm9cHHQcQ-seZnJUlPwUoMrjH4x0HH4LV8ExqasWPcPQ_fcdqY2YcqaiUfpx0UW7Yw4-znrRl9sEGacRNGhoXLS6zpCfXCg5gypKHcy09B5Va7ZaYuKMvrhKOQ55dIZbettQDV2-Q/p.png?is_prewarmed=true" alt="fotoPerfil" width="450px" height="250px">
-    <span id="descricaoProjeto"><b>APPTITE</b><br><br>
-      No Trabalho Interdiciplinar 2, eu e meu grupo criamos um aplicativo que permite aos usuários buscar e filtrar restaurantes de forma rápida e intuitiva.
-A solução conta com filtros personalizáveis, como tipo de culinária, faixa de preço, localização e avaliações de clientes, garantindo que os usuários encontrem opções que atendam exatamente às suas preferências. O sistema foi projetado com foco em usabilidade e experiência do usuário, proporcionando uma navegação simples e eficiente.
-Esse projeto tem como objetivo facilitar a descoberta de novos restaurantes e ajudar o usuário a tomar decisões mais assertivas, unindo praticidade e uma interface moderna.</span>
-  </div>
-  
-</div>
+</section>
+
 <app-footer></app-footer>

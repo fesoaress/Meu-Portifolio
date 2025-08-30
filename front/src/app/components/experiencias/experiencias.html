@@ -16,20 +16,23 @@
   </button>
 </nav>
 
-<!--Seção das Experiências-->
-<div class="experiencias">
-  <h1>Experiência</h1>
-  @for(item of arrayExperiencias(); track item;){
-    <details>
-      <summary>
-        <p>
-          <strong>{{ item.summary.strong}}</strong>
-          {{ item.summary.p }}
-        </p>
-      </summary>
-      <article [innerHTML]="item.text"></article>
-    </details>
-  }
-</div>
+<!-- Seção das Experiências -->
+<section class="experiencias">
+  <h1>Experiências</h1>
+
+  <div class="cards">
+    @for(item of arrayExperiencias(); track item;){
+      <details>
+        <summary>
+          <div>
+            <strong>{{ item.summary.strong }}</strong>
+            <p>{{ item.summary.p }}</p>
+          </div>
+        </summary>
+        <article [innerHTML]="item.text"></article>
+      </details>
+    }
+  </div>
+</section>
 
 <app-footer></app-footer>
