@@ -2,48 +2,38 @@ import { Component, signal, AfterViewInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Footer } from '../footer/footer';
 import { IExperiencias } from '../interface/IExperiencias.interface';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-pagina-inicial',
-  imports: [RouterModule, Footer],
+  imports: [RouterModule, Footer, TranslateModule], // ← TranslateModule aqui
   templateUrl: './pagina-inicial.html',
   styleUrls: ['./pagina-inicial.css', '../navbar.css']
 })
-
 export class PaginaInicial implements AfterViewInit {
 
-  public arrayExperiencias = signal<IExperiencias[]>([
-    {
-      summary: {
-        strong: 'COLOQUEI AQUI O CARGO',
-        p: 'COLOQUE AQUI A EMPRESA | DATA',
-      },
-      text: "COLOQUE AQUI UMA BREVE DESCRIÇÃO DA SUA EXPERIÊNCIA",
-    },
-    {
-      summary: {
-        strong: 'COLOQUEI AQUI O CARGO',
-        p: 'COLOQUE AQUI A EMPRESA | DATA',
-      },
-      text: "COLOQUE AQUI UMA BREVE DESCRIÇÃO DA SUA EXPERIÊNCIA",
-    }
-  ]);
+  
+  public arrayExperiencias = signal<IExperiencias[]>([]);
+  
 
-  constructor() {}
+  constructor(public translate: TranslateService) {} // ← TranslateService injetado
+
+  toggleLanguage(): void {
+    const currentLang = this.translate.currentLang;
+    const newLang = currentLang === 'pt' ? 'en' : 'pt';
+    this.translate.use(newLang);
+    localStorage.setItem('selectedLanguage', newLang);
+  }
+
+downloadCV(): void {
+  const link = document.createElement('a');
+  link.href = 'assets/files/curriculo.pdf';
+  link.download = 'curriculo.pdf';
+  link.click();
+}
 
   ngAfterViewInit(): void {
-    const detailsElements = document.querySelectorAll<HTMLDetailsElement>('.experiencias details');
-    detailsElements.forEach(det => {
-      det.addEventListener('toggle', () => {
-        if (det.open) {
-          setTimeout(() => {
-            det.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }, 200);
-        }
-      });
-    });
+    // ... seu código existente
   }
+  
 }

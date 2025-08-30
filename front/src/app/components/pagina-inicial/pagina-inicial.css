@@ -1,181 +1,109 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  
-}
-body {
-  background: #121212;
-  color: #f1f1f1;
-  line-height: 1.6;
-}
-nav {
+/* Novos estilos para os botões de ação */
+.nav-content {
   display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 18px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-nav button {
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-weight: 500;
-  
-  font-size: 16px;
-  transition: 0.3s ease;
-  padding-bottom: 5px;
-}
-nav button:hover,
-nav .active {
-  color: #4db8ff;
-  border-bottom: 2px solid #4db8ff;
-}
-.apresentacaoPerfil {
-  text-align: center;
-  margin: 100px auto 60px;
-  animation: fadeIn 1s ease-in;
-}
-.perfil {
-  display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
-}
-#foto {
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  object-fit:contain;
-  border: 4px solid #4db8ff;
-  box-shadow: 0 0 25px rgba(77, 184, 255, 0.4);
-  transition: transform 0.3s ease;
-}
-#foto:hover {
-  transform: scale(1.05);
-}
-#nomePessoa {
-  font-size: 38px;
-  font-weight: bold;
-  color: #4db8ff;
-  letter-spacing: 1px;
-}
-.sobreMim {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 35px;
-  border-radius: 16px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-  font-size: 17px;
-  text-align: justify;
-  line-height: 1.8;
-  color: #ddd;
-}
-
-.sobremim:houver{
-    transform: scale(1.05);
-}
-
-h2 {
-  text-align: center;
-  color: #4db8ff;
-  margin: 60px 0 30px;
-  font-size: 28px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-.experiencias details {
-  max-width: 900px;
-  border-radius: 12px;
-  background: #1a1a1a;
-  margin: 15px auto;
-  overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
-}
-.experiencias summary {
-  padding: 18px;
-  font-weight: bold;
-  color: #ddd;
-  cursor: pointer;
-  font-size: 16px;
-}
-.experiencias article {
-  padding: 18px;
-  color: #ddd;
-  background: #1e1e1e;
-  font-size: 15px;
-}
-.experiencias summary p {
-    display: flex;
-    flex-direction: column; /* já força cada filho em linha separada */
-}
-
-.experiencias summary p strong {
-    display: block;
-}
-.projetos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 40px;
-}
-.projeto {
-  background: #1e1e1e;
-  border-radius: 14px;
-  overflow: hidden;
-  width: 320px;
-  transition: 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  text-align: center;
-}
-.projeto img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.language-toggle {
+  background: transparent;
+  border: 2px solid #4db8ff;
+  color: #4db8ff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+  min-width: 60px;
 }
-.projeto:hover img {
-  transform: scale(1.05);
+
+.language-toggle:hover {
+  background: #4db8ff;
+  color: #121212;
 }
-.projeto:hover {
-  transform: translateY(-8px);
-}
-button {
-  display: block;
-  margin: 25px auto 0;
+
+.download-cv-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   background: #4db8ff;
   color: #000;
-  padding: 10px 20px;
   border: none;
-  border-radius: 8px;
-  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-button:hover {
+
+.download-cv-btn:hover {
   background: #36a3e0;
   color: white;
+  transform: translateY(-2px);
 }
-footer {
-  text-align: center;
-  padding: 25px;
-  font-size: 14px;
-  color: #aaa;
-  background: #0d0d0d;
-  margin-top: 50px;
+
+.download-cv-btn svg {
+  transition: transform 0.3s ease;
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+
+.download-cv-btn:hover svg {
+  transform: translateY(2px);
+}
+
+.mobile-download {
+  display: none;
+  margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-content {
+    flex-direction: column;
+    gap: 15px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  
+  .nav-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .nav-actions {
+    justify-content: center;
+  }
+  
+  .download-cv-btn {
+    display: none;
+  }
+  
+  .mobile-download {
+    display: flex;
+    margin: 20px auto 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .language-toggle, .download-cv-btn {
+    width: 100%;
+    justify-content: center;
   }
 }

@@ -6,7 +6,8 @@ import {
   PathLocationStrategy,
   Title,
   ViewportScroller
-} from "./chunk-C2FRCCBN.js";
+} from "./chunk-AJ2AR67S.js";
+import "./chunk-K4HQINLX.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   ApplicationRef,
@@ -113,7 +114,7 @@ import {
   ɵɵloadQuery,
   ɵɵqueryRefresh,
   ɵɵsanitizeUrlOrResourceUrl
-} from "./chunk-VSF4W2WL.js";
+} from "./chunk-4CVV22I2.js";
 
 // node_modules/@angular/router/fesm2022/router2.mjs
 var PRIMARY_OUTLET = "primary";
