@@ -118,9 +118,9 @@ import {
   ɵɵinject,
   ɵɵinjectAttribute,
   ɵɵstyleProp
-} from "./chunk-HKCNRWFD.js";
+} from "./chunk-VSF4W2WL.js";
 
-// ../../../../../node_modules/@angular/common/fesm2022/location.mjs
+// node_modules/@angular/common/fesm2022/location.mjs
 var _DOM = null;
 function getDOM() {
   return _DOM;
@@ -607,7 +607,7 @@ function _stripOrigin(baseHref) {
   return baseHref;
 }
 
-// ../../../../../node_modules/@angular/common/fesm2022/common_module.mjs
+// node_modules/@angular/common/fesm2022/common_module.mjs
 var HashLocationStrategy = class _HashLocationStrategy extends LocationStrategy {
   _platformLocation;
   _baseHref = "";
@@ -3713,7 +3713,7 @@ var CommonModule = class _CommonModule {
   }], null, null);
 })();
 
-// ../../../../../node_modules/@angular/common/fesm2022/xhr.mjs
+// node_modules/@angular/common/fesm2022/xhr.mjs
 function parseCookieValue(cookieStr, name) {
   name = encodeURIComponent(name);
   for (const cookie of cookieStr.split(";")) {
@@ -3728,7 +3728,7 @@ function parseCookieValue(cookieStr, name) {
 var XhrFactory = class {
 };
 
-// ../../../../../node_modules/@angular/common/fesm2022/platform_navigation.mjs
+// node_modules/@angular/common/fesm2022/platform_navigation.mjs
 var PlatformNavigation = class _PlatformNavigation {
   static ɵfac = function PlatformNavigation_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _PlatformNavigation)();
@@ -3749,7 +3749,7 @@ var PlatformNavigation = class _PlatformNavigation {
   }], null, null);
 })();
 
-// ../../../../../node_modules/@angular/common/fesm2022/common.mjs
+// node_modules/@angular/common/fesm2022/common.mjs
 var PLATFORM_BROWSER_ID = "browser";
 var VERSION = new Version("20.1.7");
 var ViewportScroller = class _ViewportScroller {
@@ -5047,7 +5047,7 @@ function booleanOrUrlAttribute(value) {
   return booleanAttribute(value);
 }
 
-// ../../../../../node_modules/@angular/platform-browser/fesm2022/dom_renderer.mjs
+// node_modules/@angular/platform-browser/fesm2022/dom_renderer.mjs
 var EVENT_MANAGER_PLUGINS = new InjectionToken(ngDevMode ? "EventManagerPlugins" : "");
 var EventManager = class _EventManager {
   _zone;
@@ -5752,7 +5752,7 @@ var EmulatedEncapsulationDomRenderer2 = class extends NoneEncapsulationDomRender
   }
 };
 
-// ../../../../../node_modules/@angular/platform-browser/fesm2022/browser.mjs
+// node_modules/@angular/platform-browser/fesm2022/browser.mjs
 var BrowserDomAdapter = class _BrowserDomAdapter extends DomAdapter {
   supportsDOMEvents = true;
   static makeCurrent() {
@@ -6201,7 +6201,7 @@ var BrowserModule = class _BrowserModule {
   }], () => [], null);
 })();
 
-// ../../../../../node_modules/@angular/common/fesm2022/module.mjs
+// node_modules/@angular/common/fesm2022/module.mjs
 var HttpHandler = class {
 };
 var HttpBackend = class {
@@ -8519,7 +8519,7 @@ var HttpClientJsonpModule = class _HttpClientJsonpModule {
   }], null, null);
 })();
 
-// ../../../../../node_modules/@angular/common/fesm2022/http.mjs
+// node_modules/@angular/common/fesm2022/http.mjs
 var httpResource = (() => {
   const jsonFn = makeHttpResourceFn("json");
   jsonFn.arrayBuffer = makeHttpResourceFn("arraybuffer");
@@ -8786,7 +8786,7 @@ function appendMissingHeadersDetection(url, headers, headersToInclude) {
   });
 }
 
-// ../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs
+// node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs
 var Meta = class _Meta {
   _doc;
   _dom;
@@ -9585,4 +9585,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-NKGZRI22.js.map
+//# sourceMappingURL=chunk-C2FRCCBN.js.map
