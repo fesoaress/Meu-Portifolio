@@ -1,43 +1,58 @@
 {
-  "hash": "8260d63b",
-  "configHash": "58e8cbe4",
-  "lockfileHash": "5e5c4556",
-  "browserHash": "62187e4e",
+  "hash": "27360261",
+  "configHash": "a3932fd9",
+  "lockfileHash": "5de196a4",
+  "browserHash": "9606b527",
   "optimized": {
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "6f9a1d45",
+      "fileHash": "59af18e0",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "a2252dce",
+      "fileHash": "d7a8b250",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "6c205c22",
+      "fileHash": "454da600",
       "needsInterop": false
     },
     "@angular/common": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "13142f3c",
+      "fileHash": "91287535",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "822634a1",
+      "needsInterop": false
+    },
+    "@emailjs/browser": {
+      "src": "../../../../../../node_modules/@emailjs/browser/es/index.js",
+      "file": "@emailjs_browser.js",
+      "fileHash": "e26940c0",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-SVEH2JOZ": {
-      "file": "chunk-SVEH2JOZ.js"
+    "chunk-RBMV74DL": {
+      "file": "chunk-RBMV74DL.js"
     },
-    "chunk-NYZDJPOO": {
-      "file": "chunk-NYZDJPOO.js"
+    "chunk-HYBPG62C": {
+      "file": "chunk-HYBPG62C.js"
     },
-    "chunk-VSF4W2WL": {
-      "file": "chunk-VSF4W2WL.js"
+    "chunk-EHFI45V4": {
+      "file": "chunk-EHFI45V4.js"
+    },
+    "chunk-GOMI4DH3": {
+      "file": "chunk-GOMI4DH3.js"
     }
   }
 }

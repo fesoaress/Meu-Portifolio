@@ -1,71 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
 <nav>
   <button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
     Página Inicial
   </button>
-
   <button routerLink="/projetos" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
     Projetos
   </button>
-
   <button routerLink="/experiencias" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
     Experiências
   </button>
-
   <button routerLink="/contato" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
     Contato
   </button>
 </nav>
-<body>
-  <main>
-  <div class="form-container">
-  <h2>Entre em Contato</h2>
-    <form>
-      <div class="form-row">
-        <div>
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" placeholder="Nome Completo">
+
+<div class="container">
+  <section class="contato-section">
+    <h1 class="title">Entre em Contato</h1>
+    
+    <!-- Modal de Opções de Email -->
+    <div *ngIf="showEmailOptions" class="email-modal-overlay" (click)="closeEmailOptions()">
+      <div class="email-modal" (click)="$event.stopPropagation()">
+        <div class="modal-header">
+          <h3>Como você prefere entrar em contato?</h3>
+          <button class="close-modal" (click)="closeEmailOptions()">×</button>
         </div>
-        <div>
-          <label for="email">E-mail:</label>
-          <input type="email" id="email" placeholder="seu.email@exemplo.com">
+        <div class="modal-content">
+          <p>Email: <strong>fefesoares16@gmail.com</strong></p>
+          <div class="email-options">
+            <button class="email-option-btn" (click)="openGmail()">Abrir Gmail</button>
+            <button class="email-option-btn" (click)="openDefaultEmail()">Usar Formulário</button>
+            <button class="email-option-btn" (click)="copyEmailToClipboard()">Copiar Email</button>
+          </div>
         </div>
       </div>
+    </div>
+    
+    <!-- ✅ Mensagem de sucesso -->
+    <div *ngIf="isSent" class="success-message">
+      <div class="message-content">
+        <i class="fas fa-check-circle"></i>
+        <p>Mensagem enviada com sucesso! Entrarei em contato em breve.</p>
+      </div>
+      <button class="close-btn" (click)="isSent = false">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <!-- ✅ Mensagem de erro -->
+    <div *ngIf="errorMessage" class="error-message">
+      <i class="fas fa-exclamation-circle"></i>
+      <p>{{ errorMessage }}</p>
+    </div>
+    
+    <div class="contato-content">
+      <div class="form-container">
+        <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" 
+                     [(ngModel)]="formData.nome" 
+                     placeholder="Nome Completo" required>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" 
+                     [(ngModel)]="formData.email" 
+                     placeholder="seu.email@exemplo.com" required>
+            </div>
+          </div>
 
-      <label for="assunto">Assunto:</label>
-      <input type="text" id="assunto" placeholder="Digite o assunto">
+          <div class="form-group">
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto" 
+                   [(ngModel)]="formData.assunto" 
+                   placeholder="Digite o assunto" required>
+          </div>
 
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" placeholder="Escreva sua mensagem aqui"></textarea>
+          <div class="form-group">
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" 
+                      [(ngModel)]="formData.mensagem" 
+                      placeholder="Escreva sua mensagem aqui" required></textarea>
+          </div>
 
-      <button id=btn-enviar-email type="submit">Enviar</button>
-    </form>
-  </div>
-  </main>
-</body>
-</html>
+          <button type="submit" class="btn-enviar" [disabled]="isLoading">
+            <span *ngIf="!isLoading">Enviar</span>  
+            <span *ngIf="isLoading">
+              <i class="fas fa-spinner fa-spin"></i> Enviando...
+            </span>
+          </button>
+        </form>
+      </div>
 
-<div class="social-container">
-  <a href="https://www.linkedin.com" target="_blank" class="social-btn">
-    <i class="fab fa-linkedin-in"></i>
+      <div class="social-container">
+        <h2 class="subtitle">Ou conecte-se comigo</h2>
+        <div class="social-buttons">
+  <a href="https://www.linkedin.com" target="_blank" class="social-btn linkedin">
+    <!-- Ícone via CSS -->
   </a>
-  <a href="mailto:seu.email@exemplo.com" class="social-btn">
-    <i class="fas fa-envelope"></i>
+  <a href="javascript:void(0)" class="social-btn email" (click)="openEmailOptions()">
+    <!-- Ícone via CSS -->
   </a>
-  <a href="https://github.com" target="_blank" class="social-btn">
-    <i class="fab fa-github"></i>
+  <a href="https://github.com" target="_blank" class="social-btn github">
+    <!-- Ícone via CSS -->
   </a>
-  <a href="https://wa.me/5599999999999" target="_blank" class="social-btn">
-    <i class="fab fa-whatsapp"></i>
+  <a href="https://wa.me/5599999999999" target="_blank" class="social-btn whatsapp">
+    <!-- Ícone via CSS -->
   </a>
 </div>
-
+      </div>
+    </div>
+  </section>
+</div>
 
 <app-footer></app-footer>

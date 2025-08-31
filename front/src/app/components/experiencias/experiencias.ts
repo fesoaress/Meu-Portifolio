@@ -39,7 +39,7 @@ export class Experiencias implements AfterViewInit {
         Organizo e ministro workshops para alunas do ensino médio, incentivando o interesse em
         <strong>tecnologia</strong>. Desenvolvo materiais didáticos e estratégias de engajamento,
         além de atuar no planejamento e execução de eventos educacionais.<br><br>
-        Produzi um artigo científico publicado: 
+        Produzi um artigo científico que foi publicado: 
         <a href="https://sol.sbc.org.br/index.php/wit/article/view/36013" target="_blank">clique aqui</a>.
       `,
     },

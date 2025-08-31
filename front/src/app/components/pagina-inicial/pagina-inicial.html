@@ -1,3 +1,4 @@
+<!-- pagina-inicial.html -->
 <nav>
   <button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
     Página Inicial
@@ -13,88 +14,91 @@
   </button>
 </nav>
 
-<!-- Perfil -->
-<div class="apresentacaoPerfil">
-  <div class="perfil">
-    <img id="foto" 
-      src="https://media.licdn.com/dms/image/v2/D4D03AQEBQCXzkjM8-A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1725643576948?e=1759363200&v=beta&t=or9tyu0fW38n95rTed8AMmawvStD3R82SLCpBZaQmtI" 
-      alt="Foto de perfil - Fernanda Soares">
+<div class="container">
+  <!-- Perfil -->
+  <section class="perfil-section">
+    <div class="perfil-content">
+      <img id="foto" 
+        src="https://media.licdn.com/dms/image/v2/D4D03AQEBQCXzkjM8-A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1725643576948?e=1759363200&v=beta&t=or9tyu0fW38n95rTed8AMmawvStD3R82SLCpBZaQmtI" 
+        alt="Foto de perfil - Fernanda Soares">
+      
+      <h1 class="title">Fernanda Soares</h1>
+    </div>
+
+    <!-- Sobre Mim -->
+    <div class="sobre-mim">
+      <p>Sou <span class="highlight">Fernanda Soares</span>, estudante de <span class="highlight">Engenharia de Software</span> e apaixonada por tecnologia. Desde cedo, descobri como sistemas bem planejados podem transformar a forma como pessoas e empresas vivem o dia a dia.</p>
+
+      <p>Atualmente, atuo no <span class="highlight">levantamento e análise de requisitos</span>, documentação técnica e melhoria de processos, além de desenvolver aplicações <span class="highlight">low-code/no-code</span> em <strong>Bubble.io</strong> e <strong>Power Apps</strong>.</p>
+
+      <p>Minha motivação é unir <span class="highlight">visão de negócio</span> com <span class="highlight">habilidades técnicas</span>, criando soluções que otimizam processos e tornam a vida das pessoas mais simples e eficiente.</p>
+
+      <p>Sou curiosa, dedicada e acredito que aprender continuamente é essencial para construir soluções inovadoras em <span class="highlight">engenharia de requisitos</span> e <span class="highlight">desenvolvimento de software</span>.</p>
+    </div>
+  </section>
+
+  <!-- Experiências -->
+  <section class="experiencias-section">
+    <h2 class="title">Experiências</h2>
     
-    <span id="nomePessoa">Fernanda Soares</span>
-  </div>
-
-  <!-- Sobre Mim -->
-  <div class="sobreMim">
-    <p>Sou <span class="highlight">Fernanda Soares</span>, estudante de <span class="highlight">Engenharia de Software</span> e apaixonada por tecnologia. Desde cedo, descobri como sistemas bem planejados podem transformar a forma como pessoas e empresas vivem o dia a dia.</p>
-
-    <p>Atualmente, atuo no <span class="highlight">levantamento e análise de requisitos</span>, documentação técnica e melhoria de processos, além de desenvolver aplicações <span class="highlight">low-code/no-code</span> em <strong>Bubble.io</strong> e <strong>Power Apps</strong>.</p>
-
-    <p>Minha motivação é unir <span class="highlight">visão de negócio</span> com <span class="highlight">habilidades técnicas</span>, criando soluções que otimizam processos e tornam a vida das pessoas mais simples e eficiente.</p>
-
-    <p>Sou curiosa, dedicada e acredito que aprender continuamente é essencial para construir soluções inovadoras em <span class="highlight">engenharia de requisitos</span> e <span class="highlight">desenvolvimento de software</span>.</p>
-  </div>
-</div>
-
-<!-- Experiências -->
-<div class="experiencias">
-  <h2>Experiências</h2>
-  @for(item of arrayExperiencias(); track item;){
-    <details>
-      <summary>
-        <i class="fa fa-briefcase"></i>
-        <p>
-          <strong>{{ item.summary.strong}}</strong>
-          {{ item.summary.p }}
-        </p>
-      </summary>
-      <article [innerHTML]="item.text"></article>
-    </details>
-  }
-</div>
-<div class="verMaisExperiencias">
-  <button routerLink="/experiencias" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-    Ver Mais
-  </button>
-</div>
-
-<!-- Projetos -->
-<div class="secaoProjetos">
-  <h2>Meus Projetos</h2>
-</div>
-<div class="projetos">
-  <div class="projeto">
-    <img src="https://previews.dropbox.com/p/thumb/ACuFBO0dKPFswaTZaNsYAjLr3fo3QSEPcIJVAvL2uz6yBKAGujKU4iuZ78MjhB5LcO-eU6sryS51cFF7lSsxNHXdyf5KfO__JeDKsIhfFZe_Zl21CgAHNXg_SbngoYggiBlTcIIZZgwcNAbgQ0Grii8QFJGbnDc7ynRAe6894Cd9vUwo8iSpbPNRidDJJ2_uv5MMokQvnVhC4joTOD1vsY6msMSx8bLck2C4hvaEnuSOtBM06TaE0AqZyCGiZ5Mp1veR0N_hufDMeT4Ii9CF3F8ODL0rrDpdyUO8OJiTcJ2QYuPqqBsBKIlH5MV6IXJAwLw/p.png" alt="Projeto 1">
-    <div class="info">
-      <h3>Banco de Currículos</h3>
-      <p>Sistema no Bubble.io para cadastro e consulta de currículos por diretores da empresa.</p>
-      
+    <div class="experiencias">
+      @for(item of arrayExperiencias(); track item;){
+        <details>
+          <summary>
+            <i class="fa fa-briefcase"></i>
+            <p>
+              <strong>{{ item.summary.strong}}</strong>
+              {{ item.summary.p }}
+            </p>
+          </summary>
+          <article [innerHTML]="item.text"></article>
+        </details>
+      }
     </div>
-  </div>
-
-  <div class="projeto">
-    <img src="https://previews.dropbox.com/p/thumb/ACuoVcrR_pOEWM-BUQ1K4n4N2rF46uBlEJrOI2v3NHNhjHmfCWi6uouj8IDji4JRbqFk0dehkHTd7wuIWU3AuZsEwwEgD1T0eogPR1rLPwwp4rYtQQR8VWKlINJDPCQ7bB2NuEp6elt3El7outmsHBACkhqZHT71p90zPBK5dAppjT9_T1Q_ur_1xsxS6MQ1Ld0U1rwJjUa_DFgqm9cHHQcQ-seZnJUlPwUoMrjH4x0HH4LV8ExqasWPcPQ_fcdqY2YcqaiUfpx0UW7Yw4-znrRl9sEGacRNGhoXLS6zpCfXCg5gypKHcy09B5Va7ZaYuKMvrhKOQ55dIZbettQDV2-Q/p.png" alt="Projeto 2">
-    <div class="info">
-      <h3>AppTite</h3>
-      <p>Plataforma de busca e filtros de restaurantes, com foco em usabilidade.</p>
-     
+    
+    <div class="ver-mais">
+      <button routerLink="/experiencias" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        Ver Mais
+      </button>
     </div>
-  </div>
+  </section>
 
-  <div class="projeto">
-    <img src="
-    https://previews.dropbox.com/p/thumb/ACsgSe3Nuxm2vW0jarpUjcJ47EQwZkTIRqpH2qC-_9TjP9nuL0COX9t3Gxtx0pXondgwhmMflcH7myZVtlmA1TTMxnsjhd2pADtrVLuLjb6jaCfzt68pmrBdw9zCUDoqiPe9Rf0XD8tN1dLMv0HZNMvvvgON_2_c6P14IbsQaYCMlvLHdc-k6Axn6dfS9f99UmG5J6uOFM0SMi_B0VgGUwuLAN6DJmlWYSeWk-A6pYnsrh7ilOmfkiQRevT4sDH89Oo78wqFnkw4uZcd-PykaksiVmY-zMoDBfP93l7REoiryV3bkHYGLiYHY4WLxv6s2KISIYaZ7CjzooaXgYQCYYM-/p.png" alt="Projeto 3">
-    <div class="info">
-      <h3>Power Apps - Gestão de Salas</h3>
-      <p>Aplicativo para gestão e reserva de salas, desenvolvido no Power Apps.</p>
-      
+  <!-- Projetos -->
+  <section class="projetos-section">
+    <h2 class="title">Meus Projetos</h2>
+    
+    <div class="cards">
+      <div class="card">
+        <img src="https://previews.dropbox.com/p/thumb/ACuFBO0dKPFswaTZaNsYAjLr3fo3QSEPcIJVAvL2uz6yBKAGujKU4iuZ78MjhB5LcO-eU6sryS51cFF7lSsxNHXdyf5KfO__JeDKsIhfFZe_Zl21CgAHNXg_SbngoYggiBlTcIIZZgwcNAbgQ0Grii8QFJGbnDc7ynRAe6894Cd9vUwo8iSpbPNRidDJJ2_uv5MMokQvnVhC4joTOD1vsY6msMSx8bLck2C4hvaEnuSOtBM06TaE0AqZyCGiZ5Mp1veR0N_hufDMeT4Ii9CF3F8ODL0rrDpdyUO8OJiTcJ2QYuPqqBsBKIlH5MV6IXJAwLw/p.png" alt="Projeto 1" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title">Banco de Currículos</h3>
+          <p class="card-description">Sistema no Bubble.io para cadastro e consulta de currículos por diretores da empresa.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://previews.dropbox.com/p/thumb/ACuoVcrR_pOEWM-BUQ1K4n4N2rF46uBlEJrOI2v3NHNhjHmfCWi6uouj8IDji4JRbqFk0dehkHTd7wuIWU3AuZsEwwEgD1T0eogPR1rLPwwp4rYtQQR8VWKlINJDPCQ7bB2NuEp6elt3El7outmsHBACkhqZHT71p90zPBK5dAppjT9_T1Q_ur_1xsxS6MQ1Ld0U1rwJjUa_DFgqm9cHHQcQ-seZnJUlPwUoMrjH4x0HH4LV8ExqasWPcPQ_fcdqY2YcqaiUfpx0UW7Yw4-znrRl9sEGacRNGhoXLS6zpCfXCg5gypKHcy09B5Va7ZaYuKMvrhKOQ55dIZbettQDV2-Q/p.png" alt="Projeto 2" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title">Apptite</h3>
+          <p class="card-description">Plataforma de busca e filtros de restaurantes, com foco em usabilidade.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://previews.dropbox.com/p/thumb/ACsgSe3Nuxm2vW0jarpUjcJ47EQwZkTIRqpH2qC-_9TjP9nuL0COX9t3Gxtx0pXondgwhmMflcH7myZVtlmA1TTMxnsjhd2pADtrVLuLjb6jaCfzt68pmrBdw9zCUDoqiPe9Rf0XD8tN1dLMv0HZNMvvvgON_2_c6P14IbsQaYCMlvLHdc-k6Axn6dfS9f99UmG5J6uOFM0SMi_B0VgGUwuLAN6DJmlWYSeWk-A6pYnsrh7ilOmfkiQRevT4sDH89Oo78wqFnkw4uZcd-PykaksiVmY-zMoDBfP93l7REoiryV3bkHYGLiYHY4WLxv6s2KISIYaZ7CjzooaXgYQCYYM-/p.png" alt="Projeto 3" class="card-img">
+        <div class="card-content">
+          <h3 class="card-title">Power Apps - Gestão de Salas</h3>
+          <p class="card-description">Aplicativo para gestão e reserva de salas, desenvolvido no Power Apps.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-<div class="verMaisProjetos">
-  <button routerLink="/projetos" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-    Ver mais
-  </button>
+    
+    <div class="ver-mais">
+      <button routerLink="/projetos" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        Ver mais
+      </button>
+    </div>
+  </section>
 </div>
 
 <app-footer></app-footer>
