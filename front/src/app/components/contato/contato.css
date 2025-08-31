@@ -144,11 +144,10 @@ nav .active {
   resize: vertical;
 }
 
-/* BOTÃO ENVIAR CORRIGIDO - TEXTO BRANCO GARANTIDO */
+
 button.btn-enviar {
   width: 100%;
   padding: 0.8rem;
-  background-color: #4db8ff;
   color: #ffffff !important; /* Força texto branco */
   border: none;
   border-radius: 8px;
@@ -156,10 +155,11 @@ button.btn-enviar {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+   border: 2px solid #2a79b9;
 }
 
 button.btn-enviar:hover {
-  background: #2a79b9;
+  border: 2px solid #4db8ff;
   color: #ffffff !important;
 }
 
@@ -269,24 +269,7 @@ button.btn-enviar:disabled {
   font-size: 1.2rem;
 }
 
-.close-btn {
-  background: none;
-  border: none;
-  color: inherit;
-  cursor: pointer;
-  padding: 0.25rem;
-  margin-left: 0.5rem;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.close-btn:hover {
-  background: rgba(76, 175, 80, 0.2);
-}
 
 /* Modal de Opções de Email */
 .email-modal-overlay {
@@ -303,7 +286,7 @@ button.btn-enviar:disabled {
 }
 
 .email-modal {
-  background: #2a2a2a;
+  background: #1b1b1b;;
   border-radius: 12px;
   padding: 20px;
   width: 90%;
