@@ -1,43 +1,43 @@
 {
-  "hash": "17d4b592",
+  "hash": "89f1ee26",
   "configHash": "d6e6b31c",
-  "lockfileHash": "40f134db",
-  "browserHash": "eba4f5d2",
+  "lockfileHash": "52d56ec2",
+  "browserHash": "e26395be",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "db888963",
+      "fileHash": "91153b3f",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "09d4df72",
+      "fileHash": "4b6a3d71",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "f4866b75",
+      "fileHash": "93eb8ec7",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "584e9768",
+      "fileHash": "5ed777cc",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "47eb904d",
+      "fileHash": "c3a0ba0f",
       "needsInterop": false
     },
     "emailjs-com": {
       "src": "../../../../../../node_modules/emailjs-com/es/index.js",
       "file": "emailjs-com.js",
-      "fileHash": "9a8339b7",
+      "fileHash": "aef332fb",
       "needsInterop": false
     }
   },
