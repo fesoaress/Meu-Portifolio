@@ -3,8 +3,7 @@ import { RouterModule } from '@angular/router';
 import { Footer } from '../footer/footer';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import emailjs from '@emailjs/browser';
-
+import emailjs from 'emailjs-com'; 
 
 @Component({
   selector: 'app-contato',
